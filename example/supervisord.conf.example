@@ -1,0 +1,9 @@
+[program:tr1ckhouse_registry]
+command=/path/to/tr1ckhouse-registry/venv/bin/python /path/to/tr1ckhouse-registry/tr1ckhouse_registry.py
+directory=/path/to/tr1ckhouse-registry
+user=youruser
+autorestart=true
+autostart=true
+environment=TR1CKHOUSE_API_KEY="your-shared-secret",TR1CKHOUSE_TTL_SEC="180",TR1CKHOUSE_BIND_HOST="127.0.0.1",TR1CKHOUSE_BIND_PORT="8766"
+stdout_logfile=/var/log/tr1ckhouse_registry_out.log
+stderr_logfile=/var/log/tr1ckhouse_registry_err.log
