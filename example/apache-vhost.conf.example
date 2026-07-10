@@ -1,0 +1,6 @@
+# Add inside your existing <VirtualHost *:443> block
+ProxyPreserveHost On
+ProxyPass "/roster"  "http://127.0.0.1:8766/roster"
+ProxyPassReverse "/roster"  "http://127.0.0.1:8766/roster"
+ProxyPass "/rosters" "http://127.0.0.1:8766/rosters"
+ProxyPassReverse "/rosters" "http://127.0.0.1:8766/rosters"
